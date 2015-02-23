@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>header!</title>
+
+    <link rel="stylesheet" type="text/css" href="">
+    <style type="text/css">
+     #square1 {
+     	height: 300px;
+     	width:300px;
+     	border: 5px solid black;
+     }
+
+     #square2 {
+     	height: 300px;
+     	width:300px;
+     	border: 5px solid black;
+     }
+    </style>
+
+</head>
+<body>
+    <div id="square1"></div>
+    <button type ="button" onclick ="ChangeColor()">Make green</button>
+
+    <div id="square2"></div>
+    <button type="button" onclick ="ChangeColor2()">Make red</button>
+
+    <script type="text/javascript">
+        //javascript code goes here at the bottom to ensure the DOM is loaded...
+     function ChangeColor() {
+     	document.getElementById("square1").style.backgroundColor ="green";
+     };
+
+      function ChangeColor2() {
+      	document.getElementById("square2").style.backgroundColor= "red";
+      };
+
+
+    </script>
+</body>
+</html>
