@@ -1,3 +1,3 @@
-function setBackgroundColor (id,crl) {
-	document.getElementById(id).style.backgroundColor=crl;
+function setBackgroundColor (mySquare,crl) {
+	document.getElementById("mySquare").style.backgroundColor=crl;
 }
