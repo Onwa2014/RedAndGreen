@@ -1,31 +1,45 @@
+function TestBlock(id) {
+//create a new div  element using 
+	 	var Mila = document.createElement("div");
+
+	 	// style the new div that you have created 
+	 	Mila.id="mila_wam" + id;
+	 	Mila.style.height="300px";
+	 	Mila.style.width="300px";
+	 	Mila.style.border="5px solid black";
+	 	Mila.style.display="inline-block";
+
+		document.body.appendChild(Mila);
+		
+
+		this.id=Mila.id;
+		this.message= function(msg){
+			Mila.innerHTML=msg;
+		}
+}
+
+
+
 var assert = {
 	i:0,
 	pass:0,
 
 	 equals: function(massage,result,newmsg)
 	 {
-	 	//create a new div  element using 
-	 	var Mila = document.createElement("div");
-
-	 	// style the new div that you have created 
-	 	Mila.id="mila_wam" + this.i;
-	 	Mila.style.height="300px";
-	 	Mila.style.width="300px";
-	 	Mila.style.border="5px solid black";
-	 	Mila.style.display="inline-block";
-
+	 	
+		var tb = new TestBlock (this.i);
 	 	//append the div you have created to the body of the HTML so that it can show
-	 	document.body.appendChild(Mila);
+	 
 		//this will check if the square is red or it's green.
-		var rg = new RedOrGreen(Mila.id);
+		var rg = new RedOrGreen(tb.id);
 		if(massage === result) {
-			Mila.innerHTML=newmsg;
+			tb.message(newmsg);
 			rg.makeGreen();
 			this.pass++;
 			//the pass++ is there so it can increment.
 		}
 		else {
-			Mila.innerHTML=newmsg;
+			tb.message(newmsg);
 			rg.makeRed();
 		}
 			this.i++;//same as here it's for it to increment...
